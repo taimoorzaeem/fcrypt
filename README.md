@@ -1,6 +1,7 @@
 # File-Encryption-and-Decryption-Tool
 
 A command line tool developed in C to encrypt and decrypt a file using a symmetric key.
+
 To build:
 
 ```
@@ -21,4 +22,4 @@ $ ./file_encrypt_decrypt -d information.txt key1
 
 ### Contributing
 
-If you would like to contribute, just send a pull request. I'll consider merging.
+If you would like to contribute or something, report an issue or just send a pull request. I'll consider merging.
