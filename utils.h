@@ -1,5 +1,5 @@
-#ifndef __DECLARATIONS_H // Include guards
-#define __DECLARATIONS_H
+#ifndef __UTILS_H 
+#define __UTILS_H
 
 void die(const char *message);
 char *keysignature(char *key, int keylen);

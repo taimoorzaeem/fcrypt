@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "declarations.h"
+#include "utils.h"
 
 void die(const char *message) {
 	printf("ERROR: %s\n", message);

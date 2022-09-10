@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "declarations.h"
+#include "utils.h"
 
 int main(int argc, char *argv[]) {
 	if (argc < 4) {
-		printf("USAGE: file_encrypt_decrypt <-e/-d> <file> <key_file>\n");
+		printf("USAGE: fcrypt <-e/-d> <file> <key_file>\n");
 		return 1;
 	}
 	
