@@ -1,8 +1,16 @@
 CC=gcc
 CFLAGS=-Wall -g
+DESTDIR=/usr/bin
 
-all: main.o file_encrypt_decrypt.o
-	$(CC) $(CFLAGS) main.o file_encrypt_decrypt.o -o file_encrypt_decrypt
+all: fcrypt
+
+fcrypt: utils.o
 
 clean:
 	rm -f *.o
+
+install: all
+	install fcrypt $(DESTDIR)
+
+valgrind: all
+	valgrind ./fcrypt
