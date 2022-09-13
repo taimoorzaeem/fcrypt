@@ -1,6 +1,8 @@
-# File-Encryption-and-Decryption-Tool
+# Fcrypt
 
 A command line tool to encrypt and decrypt a file using a symmetric key.
+
+This implementation uses a Vigenère Cipher with a little twist. It take one's complement after xoring which is also symmetric.
 
 **To build:**
 
@@ -11,6 +13,7 @@ $ make
 **To install:**
 
 ```
+$ make
 $ sudo make install
 ```
 
@@ -28,6 +31,3 @@ To decrypt the same file:
 $ fcrypt -d <filename> <key-filename>
 ```
 
-### Contributing
-
-If you would like to contribute or something, report an issue or just send a pull request. 
