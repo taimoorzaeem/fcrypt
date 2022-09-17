@@ -12,5 +12,8 @@ clean:
 install: all
 	install fcrypt $(DESTDIR)
 
+uninstall:
+	rm -f $(DESTDIR)/fcrypt
+
 valgrind: all
 	valgrind ./fcrypt
