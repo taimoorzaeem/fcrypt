@@ -31,3 +31,7 @@ To decrypt the same file:
 $ fcrypt -d <filename> <key-filename>
 ```
 
+**To unistall:**
+```
+$ make uninstall
+```
