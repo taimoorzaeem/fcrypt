@@ -7,6 +7,7 @@ all: fcrypt
 fcrypt: utils.o
 
 clean:
+	rm -f fcrypt
 	rm -f *.o
 
 install: all
