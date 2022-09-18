@@ -10,7 +10,7 @@ void die(const char *message) {
 }
 
 /* Function generates key signature */
-char *keysignature(char *key, int keylen) {
+char *keysignature(const char *key, const int keylen) {
 	int i, c, bit_c = 0;
 	char *keysign = malloc(sizeof(char) * 6);
 	
@@ -54,7 +54,7 @@ char *readkeyfile(FILE *fp) {
 
 
 // Checks the key signature present in the encrypted file
-void check_sign(FILE *fp, char *key_sign, char *file_op) {
+void check_sign(FILE *fp, char *key_sign, const char *file_op) {
 	char file_key_sign[6];
 	fseek(fp, -5, SEEK_END);
 	fgets(file_key_sign, 6, fp);
@@ -75,7 +75,7 @@ void check_sign(FILE *fp, char *key_sign, char *file_op) {
 
 
 // Runs the encryption / decryption algorithm
-FILE *run_algorithm(FILE *fp, char *key, int keylen, char *file_op) {
+FILE *run_algorithm(FILE *fp, const char *key, const int keylen, const char *file_op) {
 	fseek(fp, 0, SEEK_END);
 	long file_size = ftell(fp);
 	if (strcmp(file_op, "-d") == 0)
