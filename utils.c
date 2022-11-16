@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 #include "utils.h"
 
 void die(const char *message) {
@@ -13,6 +14,7 @@ void die(const char *message) {
 char *keysignature(const char *key, const int keylen) {
 	int i, c, bit_c = 0;
 	char *keysign = malloc(sizeof(char) * 6);
+	assert(keysign != NULL);
 	
 	// Counting number of 1 bits in the key
 	for (i = 0; i < keylen; i++)
@@ -43,6 +45,8 @@ char *readkeyfile(FILE *fp) {
 	int keylen = ftell(fp);
 	// allocate memory on heap to store the key
 	char *key = malloc(sizeof(char) * keylen);
+	assert(key != NULL);
+
 	fseek(fp, 0, SEEK_SET);
 	int i, c;
 	for (i = 0; i < keylen; i++) {
