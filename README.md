@@ -6,6 +6,10 @@ This implementation uses a Vigenère Cipher with a little twist. It take one's c
 
 I have also append a dynamic key signature at the end of encrypted file which would detect and notify the user if a wrong key was used in decryption.
 
+### Status
+
+I wrote this for a school project for my programming fundamentals class.
+
 **To build:**
 
 ```
@@ -33,7 +37,7 @@ To decrypt the same file:
 $ fcrypt -d <filename> <key-filename>
 ```
 
-**To unistall:**
+**To uninstall:**
 ```
 $ sudo make uninstall
 ```
